@@ -1,0 +1,226 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context="com.example.moody.home.HomeFragment">
+
+    <ImageView
+        android:id="@+id/profile_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackground"
+        android:clickable="true"
+        android:paddingStart="@dimen/screen_padding"
+        android:paddingTop="@dimen/screen_padding"
+        android:paddingEnd="@dimen/screen_padding"
+        android:paddingBottom="16dp"
+        android:src="@drawable/ic_profile_picture"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/hello_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_small"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:textColor="@color/purple_400_dark"
+        android:textSize="@dimen/text_title"
+        android:textStyle="bold|italic"
+        app:layout_constraintStart_toEndOf="@id/profile_icon"
+        app:layout_constraintTop_toTopOf="@id/profile_icon" />
+
+
+    <TextView
+        android:id="@+id/feeling_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_medium"
+        android:layout_marginTop="@dimen/margin_xbig"
+        android:text="@string/how_do_you_feel_today"
+        android:textColor="@color/purple_400_dark"
+        android:textSize="@dimen/text_normal"
+        app:layout_constraintStart_toStartOf="@id/profile_icon"
+        app:layout_constraintTop_toBottomOf="@id/hello_message" />
+
+    <RadioGroup
+        android:id="@+id/emotions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginStart="@dimen/margin_medium"
+        android:layout_marginEnd="@dimen/margin_small"
+        app:layout_constraintStart_toStartOf="@id/feeling_message"
+        app:layout_constraintTop_toBottomOf="@id/feeling_message">
+
+        <RadioButton
+            android:id="@+id/happy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:background="@drawable/round_grey_corners"
+            android:buttonTint="@color/purple_700_dark"
+            android:drawablePadding="@dimen/item_padding_xsmall"
+            android:padding="@dimen/padding"
+            android:text="@string/happy"
+            android:textColor="@color/custom_black"
+            android:textSize="@dimen/text_small"
+            android:textStyle="bold"
+            app:drawableRightCompat="@drawable/happy" />
+
+        <RadioButton
+            android:id="@+id/sad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="7dp"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:background="@drawable/round_grey_corners"
+            android:buttonTint="@color/purple_700_dark"
+            android:drawablePadding="@dimen/item_padding_xsmall"
+            android:padding="@dimen/padding"
+            android:text="@string/sad"
+            android:textColor="@color/custom_black"
+            android:textSize="@dimen/text_small"
+            android:textStyle="bold"
+            app:drawableRightCompat="@drawable/sad" />
+
+        <RadioButton
+            android:id="@+id/tired"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="7dp"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:background="@drawable/round_grey_corners"
+            android:buttonTint="@color/purple_700_dark"
+            android:drawablePadding="@dimen/item_padding_xsmall"
+            android:padding="@dimen/padding"
+            android:text="@string/tired"
+            android:textColor="@color/custom_black"
+            android:textSize="@dimen/text_small"
+            android:textStyle="bold"
+            app:drawableRightCompat="@drawable/tired" />
+
+
+        <RadioButton
+            android:id="@+id/enthusiastic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="-380dp"
+            android:layout_marginTop="100dp"
+            android:background="@drawable/round_grey_corners"
+            android:buttonTint="@color/purple_700_dark"
+            android:drawablePadding="@dimen/item_padding_xsmall"
+            android:padding="@dimen/padding"
+            android:text="@string/enthusiastic"
+            android:textColor="@color/custom_black"
+            android:textSize="@dimen/text_small"
+            android:textStyle="bold"
+            app:drawableRightCompat="@drawable/excited" />
+
+        <RadioButton
+            android:id="@+id/nostalgic"
+            android:layout_width="164dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="100dp"
+            android:background="@drawable/round_grey_corners"
+            android:buttonTint="@color/purple_700_dark"
+            android:drawablePadding="@dimen/item_padding_xsmall"
+            android:padding="@dimen/padding"
+            android:text="@string/nostalgic"
+            android:textColor="@color/custom_black"
+            android:textSize="@dimen/text_small"
+            android:textStyle="bold"
+            app:drawableRightCompat="@drawable/nostalgic" />
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/interests"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_xbig"
+        android:text="@string/what_are_you_looking_for"
+        android:textColor="@color/purple_400_dark"
+        android:textSize="@dimen/text_normal"
+        app:layout_constraintStart_toStartOf="@id/feeling_message"
+        app:layout_constraintTop_toBottomOf="@id/emotions" />
+
+    <RadioGroup
+        android:id="@+id/ideas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginStart="@dimen/margin_medium"
+        android:layout_marginEnd="@dimen/margin_small"
+        app:layout_constraintStart_toStartOf="@id/interests"
+        app:layout_constraintTop_toBottomOf="@id/interests">
+
+    <RadioButton
+        android:id="@+id/movies"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:background="@drawable/round_grey_corners"
+        android:buttonTint="@color/purple_700_dark"
+        android:drawablePadding="@dimen/item_padding_xsmall"
+        android:padding="@dimen/padding"
+        android:text="@string/movie_ideas"
+        android:textColor="@color/custom_black"
+        android:textSize="@dimen/text_small"
+        android:textStyle="bold"
+        app:drawableRightCompat="@drawable/movie" />
+
+    <RadioButton
+        android:id="@+id/travel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="7dp"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:background="@drawable/round_grey_corners"
+        android:buttonTint="@color/purple_700_dark"
+        android:drawablePadding="@dimen/item_padding_xsmall"
+        android:padding="@dimen/padding"
+        android:text="@string/travel_ideas"
+        android:textColor="@color/custom_black"
+        android:textSize="@dimen/text_small"
+        android:textStyle="bold"
+        app:drawableRightCompat="@drawable/travel" />
+
+    <RadioButton
+        android:id="@+id/music"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="-340dp"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/round_grey_corners"
+        android:buttonTint="@color/purple_700_dark"
+        android:drawablePadding="@dimen/item_padding_xsmall"
+        android:padding="@dimen/padding"
+        android:text="@string/music_recommendation"
+        android:textColor="@color/custom_black"
+        android:textSize="@dimen/text_small"
+        android:textStyle="bold"
+        app:drawableRightCompat="@drawable/music" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/next_button"
+        style="@style/PrimaryButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/screen_padding"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="@dimen/screen_padding"
+        android:elevation="@dimen/elevation"
+        android:text="@string/next"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/ideas"
+        app:layout_constraintTop_toBottomOf="@id/ideas"
+        app:shapeAppearanceOverlay="@style/rounded_corner_button" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
