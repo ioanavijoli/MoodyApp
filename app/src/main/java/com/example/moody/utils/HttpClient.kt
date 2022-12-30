@@ -1,4 +1,4 @@
-package com.example.moody
+package com.example.moody.utils
 
 import com.example.moody.services.MovieService
 import com.example.moody.services.SongService

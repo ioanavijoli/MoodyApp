@@ -2,17 +2,14 @@ package com.example.moody
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.moody.authentification.LogInFragment
+import com.example.moody.feature.authentification.LogInFragment
 import com.example.moody.databinding.ActivityMainBinding
-import com.example.moody.authentification.SignUpFragment
+import com.example.moody.feature.home.SignUpFragment
 import com.example.moody.extensions.handleReplace
-import com.example.moody.home.HomeFragment
-import com.example.moody.home.ProfileFragment
-import utils.MovieFragment
-import java.net.CookieHandler
-import java.net.CookieManager
-import java.net.CookiePolicy
-import java.util.Calendar.getInstance
+import com.example.moody.feature.home.HomeFragment
+import com.example.moody.feature.home.ProfileFragment
+import com.example.moody.feature.categories.MovieFragment
+import com.example.moody.feature.categories.MusicFragment
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -51,4 +48,7 @@ class MainActivity : AppCompatActivity() {
         addToBackStack = true
     ) { MovieFragment.newInstance(category) }
 
+    fun openMusicScreen(category: String) = supportFragmentManager.handleReplace(
+        addToBackStack = true
+    ) { MusicFragment.newInstance(category) }
 }

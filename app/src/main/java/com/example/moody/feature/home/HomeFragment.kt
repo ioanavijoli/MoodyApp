@@ -1,4 +1,4 @@
-package com.example.moody.home
+package com.example.moody.feature.home
 
 import android.os.Bundle
 import android.view.View
@@ -63,6 +63,24 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
 
                 if(binding.nostalgic.isChecked)
                     (activity as MainActivity).openMoviesScreen("Nostalgic")
+
+            }
+            if(binding.music.isChecked)
+            {
+                if(binding.happy.isChecked)
+                    (activity as MainActivity).openMusicScreen("Happy")
+
+                if(binding.sad.isChecked)
+                    (activity as MainActivity).openMusicScreen("Sad")
+
+                if(binding.tired.isChecked)
+                    (activity as MainActivity).openMusicScreen("Tired")
+
+                if(binding.enthusiastic.isChecked)
+                    (activity as MainActivity).openMusicScreen("Enthusiastic")
+
+                if(binding.nostalgic.isChecked)
+                    (activity as MainActivity).openMusicScreen("Nostalgic")
 
             }
         }

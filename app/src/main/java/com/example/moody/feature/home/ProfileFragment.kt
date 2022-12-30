@@ -1,10 +1,10 @@
-package com.example.moody.home
+package com.example.moody.feature.home
 
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 import androidx.fragment.app.Fragment
-import com.example.moody.HttpClient
+import com.example.moody.utils.HttpClient
 import com.example.moody.MainActivity
 import com.example.moody.MoodyApplication
 import com.example.moody.R

@@ -1,4 +1,4 @@
-package com.example.moody.authentification
+package com.example.moody.feature.authentification
 
 import android.text.Editable
 import android.text.TextWatcher
