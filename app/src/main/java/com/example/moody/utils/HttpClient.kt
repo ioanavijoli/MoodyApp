@@ -1,5 +1,6 @@
-package com.example.moody
+package com.example.moody.utils
 
+import com.example.moody.services.CityService
 import com.example.moody.services.MovieService
 import com.example.moody.services.SongService
 import com.example.moody.services.UserService
@@ -20,5 +21,12 @@ object HttpClient {
     val userService: UserService = retrofit.create(UserService::class.java)
     val movieService: MovieService = retrofit.create(MovieService::class.java)
     val songService: SongService = retrofit.create(SongService::class.java)
+
+    private val cityRetrofit = Retrofit.Builder()
+        .baseUrl("https://63ae190f3e465169166acdd3.mockapi.io/api/v1/")
+        .client(okHttpClient)
+        .addConverterFactory(MoshiConverterFactory.create())
+        .build()
+    val cityService: CityService = cityRetrofit.create(CityService::class.java)
 
 }

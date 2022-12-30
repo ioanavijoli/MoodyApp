@@ -1,4 +1,4 @@
-package com.example.moody.authentification
+package com.example.moody.feature.home
 
 import android.os.Bundle
 import android.view.View
@@ -6,8 +6,9 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.example.moody.R
 import com.example.moody.databinding.FragmentSignUpBinding
-import com.example.moody.HttpClient
+import com.example.moody.utils.HttpClient
 import com.example.moody.MainActivity
+import com.example.moody.feature.authentification.DataValidators
 import com.example.moody.data.User
 import com.example.moody.data.UserDetails
 

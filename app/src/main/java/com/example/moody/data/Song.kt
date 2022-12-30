@@ -7,6 +7,8 @@ import com.squareup.moshi.JsonClass
 data class Song(
     @Json(name = "title")
     val title: String,
+    @Json(name = "year")
+    val year: Int,
     @Json(name = "artist")
     val artist: String,
     @Json(name = "genre")

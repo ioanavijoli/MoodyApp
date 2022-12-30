@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/purple_200"
+    android:layout_gravity="center_horizontal">
+
+
+    <ImageView
+        android:id="@+id/back_button"
+        android:layout_width="@dimen/circle_button"
+        android:layout_height="@dimen/circle_button"
+        android:layout_marginTop="@dimen/small_margin"
+        android:background="@drawable/back_button"
+        android:clickable="true"
+        android:focusable="true"
+        android:padding="@dimen/item_padding"
+        android:scaleType="centerInside"
+        app:iconTint="@color/custom_black"
+        app:layout_constraintStart_toStartOf="@id/guideline_start"
+        app:layout_constraintTop_toTopOf="@id/mood" />
+
+    <TextView
+        android:id="@+id/mood"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="City ideas: Happy"
+        android:textSize="@dimen/text_normal"
+        android:textStyle="bold"
+        android:clickable="true"
+        android:focusable="true"
+        android:drawablePadding="@dimen/padding"
+        android:scaleType="centerInside"
+        app:iconTint="@color/custom_black"
+        app:layout_constraintEnd_toStartOf="@id/guideline_end"
+        app:layout_constraintTop_toTopOf="@id/guideline_top"
+        app:drawableEndCompat="@drawable/happy" />
+
+    <View
+        android:id="@+id/horizontal_line"
+        android:layout_width="wrap_content"
+        android:layout_height="2dp"
+        android:background="@color/black"
+        app:layout_constraintEnd_toStartOf="@id/guideline_end"
+        app:layout_constraintStart_toStartOf="@id/guideline_start"
+        app:layout_constraintTop_toBottomOf="@id/mood" />
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/pager"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/item_padding"
+        app:layout_constraintStart_toStartOf="@id/guideline_start"
+        app:layout_constraintEnd_toStartOf="@id/guideline_end"
+        app:layout_constraintTop_toBottomOf="@id/horizontal_line"
+        tools:ignore="SpeakableTextPresentCheck">
+
+    </androidx.viewpager.widget.ViewPager>
+
+    <View
+        android:id="@+id/horizontal_line1"
+        android:layout_width="wrap_content"
+        android:layout_height= "2dp"
+        android:background="@color/black"
+        android:layout_marginBottom="@dimen/padding"
+        app:layout_constraintStart_toStartOf="@id/guideline_start"
+        app:layout_constraintEnd_toStartOf="@id/guideline_end"
+        app:layout_constraintTop_toTopOf="@id/movie_recommendation"/>
+
+    <Button
+        android:id="@+id/movie_recommendation"
+        style="@style/SecondaryButton"
+        android:layout_marginStart="@dimen/screen_padding"
+        android:layout_marginEnd="@dimen/screen_padding"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/movie_ideas_button"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/guideline_bottom"
+        app:layout_constraintStart_toEndOf="@id/guideline_end"
+        app:shapeAppearanceOverlay="@style/rounded_corner_button" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="32dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="@dimen/screen_padding" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="@dimen/large_padding" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_end="@dimen/screen_padding" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
