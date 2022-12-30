@@ -6,6 +6,7 @@ import com.example.moody.feature.authentification.LogInFragment
 import com.example.moody.databinding.ActivityMainBinding
 import com.example.moody.feature.home.SignUpFragment
 import com.example.moody.extensions.handleReplace
+import com.example.moody.feature.categories.CityFragment
 import com.example.moody.feature.home.HomeFragment
 import com.example.moody.feature.home.ProfileFragment
 import com.example.moody.feature.categories.MovieFragment
@@ -51,4 +52,8 @@ class MainActivity : AppCompatActivity() {
     fun openMusicScreen(category: String) = supportFragmentManager.handleReplace(
         addToBackStack = true
     ) { MusicFragment.newInstance(category) }
+
+    fun openTravelScreen(category: String) = supportFragmentManager.handleReplace(
+        addToBackStack = true
+    ) { CityFragment.newInstance(category) }
 }

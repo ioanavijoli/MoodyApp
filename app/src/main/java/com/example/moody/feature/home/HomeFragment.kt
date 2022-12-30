@@ -83,8 +83,25 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
                     (activity as MainActivity).openMusicScreen("Nostalgic")
 
             }
-        }
+            if(binding.travel.isChecked)
+            {
+                if(binding.happy.isChecked)
+                    (activity as MainActivity).openTravelScreen("Happy")
 
+                if(binding.sad.isChecked)
+                    (activity as MainActivity).openTravelScreen("Sad")
+
+                if(binding.tired.isChecked)
+                    (activity as MainActivity).openTravelScreen("Tired")
+
+                if(binding.enthusiastic.isChecked)
+                    (activity as MainActivity).openTravelScreen("Enthusiastic")
+
+                if(binding.nostalgic.isChecked)
+                    (activity as MainActivity).openTravelScreen("Nostalgic")
+
+            }
+        }
     }
 
     companion object {

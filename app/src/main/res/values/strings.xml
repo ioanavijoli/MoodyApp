@@ -56,6 +56,7 @@
     <string name="nostalgic">Nostalgic</string>
     <string name="movie_ideas">Movie ideas</string>
     <string name="movie_ideas_u">Movie ideas: </string>
+    <string name="movie_ideas_button"> GO TO:      Movie Ideas  >> </string>
     <string name="travel_ideas">Travel ideas</string>
     <string name="travel_ideas_button"> GO TO:      Travel Ideas  >> </string>
     <string name="music_recommendation">Music Recommendation</string>
@@ -71,4 +72,8 @@
     <string name="plot">Plot: </string>
     <string name="artist">Artist: </string>
     <string name="genre">Genre: </string>
+    <string name="country">Country: </string>
+    <string name="population">Population: </string>
+    <string name="tourist_attractions">Tourist attractions: </string>
+    <string name="restaurants">Restaurants: </string>
 </resources>
