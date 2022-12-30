@@ -5,16 +5,13 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 import androidx.fragment.app.Fragment
-import com.example.moody.utils.HttpClient
 import com.example.moody.MainActivity
 import com.example.moody.R
-import com.example.moody.data.Movie
 import com.example.moody.data.Song
-import com.example.moody.databinding.FragmentMoviesBinding
 import com.example.moody.databinding.FragmentMusicBinding
 import com.example.moody.extensions.BundleArgumentDelegate
-import com.example.moody.utils.MovieAdapter
 import com.example.moody.extensions.withArguments
+import com.example.moody.utils.HttpClient
 import com.example.moody.utils.MusicAdapter
 import retrofit2.Call
 import retrofit2.Response
@@ -32,13 +29,16 @@ class MusicFragment : Fragment(R.layout.fragment_music) {
         binding.backButton.setOnClickListener {
             (activity as MainActivity).goBack()
         }
+        binding.travelIdeas.setOnClickListener {
+            arguments?.let { it1 -> (activity as MainActivity).openTravelScreen(it1.category) }
+        }
 
     }
 
-    private fun getGenres(category: String): String{
+    private fun getGenres(category: String): String {
         var genres = ""
-        when(category){
-            "Happy" ->{
+        when (category) {
+            "Happy" -> {
                 genres = "Latin|Folk|Hip Hop|Electronic|Rap|Pop|Reggae|Rock"
                 drawable = R.drawable.happy
             }
@@ -63,11 +63,11 @@ class MusicFragment : Fragment(R.layout.fragment_music) {
     }
 
     @SuppressLint("SetTextI18n")
-    private fun displaySongs(binding: FragmentMusicBinding, category: String){
+    private fun displaySongs(binding: FragmentMusicBinding, category: String) {
 
         val genres = getGenres(category)
         binding.mood.text = "Song ideas: $category "
-        binding.mood.setCompoundDrawablesWithIntrinsicBounds(0,0, drawable, 0)
+        binding.mood.setCompoundDrawablesWithIntrinsicBounds(0, 0, drawable, 0)
 
         HttpClient.songService.getSongsByGenre(genres).enqueue(
             object : retrofit2.Callback<List<Song>> {

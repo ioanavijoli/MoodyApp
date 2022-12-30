@@ -30,18 +30,8 @@
     <string name="logged_out">Logged out</string>
     <string name="your_profile">Your Profile</string>
     <string name="sign_in_profile_text">Sign in or create an account to save your favorites</string>
-    <string name="notifications">Notifications</string>
-    <string name="legal">Legal</string>
     <string name="sign_up_log_in">Sign up/ Log in</string>
-    <string name="close">Close</string>
-    <string name="recipe_image">Recipe Image</string>
     <string name="sign_up">Sign Up</string>
-    <string name="view_step_by_step">View step by step</string>
-    <string name="edit_profile">Edit profile</string>
-    <string name="save">Save</string>
-    <string name="add_profile_picture">Add a profile picture</string>
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="greeting_message">Hello there!</string>
     <string name="good_morning">Good morning!</string>
     <string name="have_a_nice_day">Have a nice day!</string>
     <string name="good_afternoon">Good afternoon!</string>
@@ -55,14 +45,12 @@
     <string name="enthusiastic">Enthusiastic</string>
     <string name="nostalgic">Nostalgic</string>
     <string name="movie_ideas">Movie ideas</string>
-    <string name="movie_ideas_u">Movie ideas: </string>
     <string name="movie_ideas_button"> GO TO:      Movie Ideas  >> </string>
     <string name="travel_ideas">Travel ideas</string>
     <string name="travel_ideas_button"> GO TO:      Travel Ideas  >> </string>
     <string name="music_recommendation">Music Recommendation</string>
     <string name="music_recommendation_button"> GO TO:      Music Ideas  >> </string>
     <string name="next">NEXT >></string>
-    <string name="movie_photo">Movie Photo</string>
     <string name="title"><u>Title: </u></string>
     <string name="year">Year: </string>
     <string name="runtime">Runtime: </string>
@@ -76,4 +64,7 @@
     <string name="population">Population: </string>
     <string name="tourist_attractions">Tourist attractions: </string>
     <string name="restaurants">Restaurants: </string>
+    <string name="city_ideas_happy">City ideas: Happy</string>
+    <string name="movie_ideas_happy">Movie ideas: Happy</string>
+    <string name="music_ideas_happy">Music ideas: Happy</string>
 </resources>

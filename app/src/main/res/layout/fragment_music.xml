@@ -26,7 +26,7 @@
         android:id="@+id/mood"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Music ideas: Happy"
+        android:text="@string/music_ideas_happy"
         android:textSize="@dimen/text_normal"
         android:textStyle="bold"
         android:clickable="true"

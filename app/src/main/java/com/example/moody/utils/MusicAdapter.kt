@@ -8,9 +8,7 @@ import android.view.ViewGroup
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.viewpager.widget.PagerAdapter
 import com.bumptech.glide.Glide
-import com.example.moody.data.Movie
 import com.example.moody.data.Song
-import com.example.moody.databinding.MovieItemBinding
 import com.example.moody.databinding.MusicItemBinding
 
 
